@@ -1,9 +1,800 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Portfolio</title>
-</head>
-<body>
-  <h1>Portfolio Loading...</h1>
-</body>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Mohammed Alshammasi | Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="css/styles.css" />
+    <script src="https://unpkg.com/lucide@latest"></script>
+  </head>
+
+  <body>
+    <!-- ===== Navbar ===== -->
+    <header class="navbar">
+      <div class="container nav-inner">
+        <a class="logo" href="#home">Mohammed</a>
+
+        <nav class="nav-links">
+          <a href="#about">About</a>
+          <a href="#highlights">Why Me</a>
+          <a href="#projects">Projects</a>
+          <a href="#github">GitHub</a>
+          <a href="#contact">Contact</a>
+        </nav>
+
+        <button
+          id="themeToggle"
+          class="theme-toggle"
+          type="button"
+          aria-label="Toggle dark and light mode"
+          title="Toggle theme"
+        >
+          <i data-lucide="moon"></i>
+          <span id="themeLabel">Dark Mode</span>
+        </button>
+      </div>
+    </header>
+
+    <!-- ===== Hero ===== -->
+    <main id="home" class="hero reveal">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <p class="hero-kicker">
+            <span class="badge">
+              <i data-lucide="sparkles"></i>
+              Personal Portfolio Web Application
+            </span>
+          </p>
+
+          <h1 class="hero-title">
+            Building clean, responsive
+            <span class="accent">web experiences</span>
+          </h1>
+
+          <p class="hero-subtitle">
+            Junior Software Engineering Student focused on HTML, CSS,
+            JavaScript, responsive design, and modern interactive UI. This final
+            portfolio brings together my projects, API integration, state
+            management, validation, animations, and professional documentation.
+          </p>
+
+          <p id="greeting" class="greeting"></p>
+
+          <div class="hero-actions">
+            <a class="btn" href="#projects">
+              <i data-lucide="layout-grid"></i>
+              View Projects
+            </a>
+
+            <a class="btn btn-outline" href="#github">
+              <i data-lucide="github"></i>
+              Live GitHub Data
+            </a>
+          </div>
+
+          <div class="visitor-panel">
+            <h3 class="mini-title">Personalize Your Visit</h3>
+            <p class="mini-text">
+              Enter your name and the site will remember it the next time you
+              open the page.
+            </p>
+
+            <div class="visitor-form">
+              <input
+                id="visitorName"
+                type="text"
+                placeholder="Enter your name"
+                aria-label="Visitor name"
+              />
+              <button id="saveVisitorBtn" class="btn btn-small" type="button">
+                <i data-lucide="save"></i>
+                Save Name
+              </button>
+              <button
+                id="clearVisitorBtn"
+                class="btn btn-outline btn-small"
+                type="button"
+              >
+                <i data-lucide="rotate-ccw"></i>
+                Clear
+              </button>
+            </div>
+
+            <p
+              id="visitorMessage"
+              class="visitor-message"
+              aria-live="polite"
+            ></p>
+          </div>
+
+          <div class="hero-stats">
+            <div class="stat-card">
+              <i data-lucide="clock-3"></i>
+              <div>
+                <p class="stat-label">Time on Site</p>
+                <p id="timeCounter" class="stat-value">0s</p>
+              </div>
+            </div>
+
+            <div class="stat-card">
+              <i data-lucide="monitor-smartphone"></i>
+              <div>
+                <p class="stat-label">Mode</p>
+                <p id="themeStatusText" class="stat-value">Dark</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-image">
+          <img
+            src="assets/images/Mohammed.JPG"
+            alt="Mohammed Alshammasi"
+            class="profile-img"
+            loading="eager"
+          />
+        </div>
+      </div>
+    </main>
+
+    <!-- ===== About ===== -->
+    <section id="about" class="section reveal">
+      <div class="container">
+        <h2 class="section-title">About Me</h2>
+        <p class="section-subtitle">A short professional introduction.</p>
+
+        <p class="text">
+          I’m Mohammed Alshammasi, a junior Software Engineering student. I
+          enjoy building structured, responsive websites and improving my skills
+          in frontend and backend development. I also like turning simple
+          interfaces into cleaner, more interactive, and more professional user
+          experiences.
+        </p>
+      </div>
+    </section>
+
+    <!-- ===== Why Choose Me ===== -->
+    <section id="highlights" class="section reveal">
+      <div class="container">
+        <h2 class="section-title">Why Choose Me</h2>
+        <p class="section-subtitle">
+          I focus on clarity, responsiveness, maintainability, and continuous
+          improvement.
+        </p>
+
+        <div class="feature-list">
+          <article class="feature-item">
+            <div class="feature-icon">
+              <i data-lucide="smartphone"></i>
+            </div>
+            <div class="feature-content">
+              <h3 class="feature-title">Responsive Design</h3>
+              <p class="feature-text">
+                Layouts that adapt smoothly across mobile, tablet, and desktop
+                using Flexbox and Grid.
+              </p>
+            </div>
+          </article>
+
+          <article class="feature-item">
+            <div class="feature-icon">
+              <i data-lucide="code-2"></i>
+            </div>
+            <div class="feature-content">
+              <h3 class="feature-title">Clean Structure</h3>
+              <p class="feature-text">
+                Organized folders, readable HTML, reusable CSS patterns, and
+                clear JavaScript functions.
+              </p>
+            </div>
+          </article>
+
+          <article class="feature-item">
+            <div class="feature-icon">
+              <i data-lucide="rocket"></i>
+            </div>
+            <div class="feature-content">
+              <h3 class="feature-title">Continuous Improvement</h3>
+              <p class="feature-text">
+                I learn by building projects, applying feedback, and improving
+                both design and functionality.
+              </p>
+            </div>
+          </article>
+
+          <article class="feature-item">
+            <div class="feature-icon">
+              <i data-lucide="file-text"></i>
+            </div>
+            <div class="feature-content">
+              <h3 class="feature-title">Documentation Mindset</h3>
+              <p class="feature-text">
+                I document decisions, AI usage, project structure, and user
+                guidance clearly.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Projects ===== -->
+    <section id="projects" class="section reveal">
+      <div class="container">
+        <h2 class="section-title">Projects</h2>
+        <p class="section-subtitle">
+          Click any project card to watch a short demo video. Each project also
+          includes a LinkedIn post link.
+        </p>
+
+        <div class="project-controls">
+          <div class="filter-bar" role="group" aria-label="Project filters">
+            <button class="filter-btn active" type="button" data-filter="all">
+              All
+            </button>
+            <button class="filter-btn" type="button" data-filter="ui">
+              UI
+            </button>
+            <button class="filter-btn" type="button" data-filter="web">
+              Web App
+            </button>
+            <button class="filter-btn" type="button" data-filter="mobile">
+              Mobile
+            </button>
+          </div>
+
+          <div class="sort-controls">
+            <div class="control-group">
+              <label for="sortProjects">Sort By</label>
+              <select id="sortProjects">
+                <option value="default">Default Order</option>
+                <option value="title-asc">Title (A-Z)</option>
+                <option value="title-desc">Title (Z-A)</option>
+              </select>
+            </div>
+
+            <div class="control-group">
+              <label for="skillLevel">Project Level</label>
+              <select id="skillLevel">
+                <option value="all">Show All</option>
+                <option value="beginner">Beginner Friendly</option>
+                <option value="advanced">Advanced Focus</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <p id="filterStatus" class="filter-status" aria-live="polite">
+          Showing all projects.
+        </p>
+
+        <div class="projects-grid" id="projectsGrid">
+          <article
+            class="project-card reveal-card featured-project"
+            data-category="web"
+            data-level="advanced"
+            data-title="PlayVibe"
+            data-video="assets/videos/PlayVibe.mov"
+            data-modal-title="PlayVibe – Streaming Platform"
+          >
+            <div class="project-image">
+              <img
+                src="assets/images/PlayVibe.jpg"
+                alt="PlayVibe Streaming Platform"
+                class="project-img"
+                loading="lazy"
+              />
+              <span class="project-play">
+                <i data-lucide="play"></i>
+              </span>
+            </div>
+
+            <div class="project-body">
+              <p class="project-tag">Full-Stack / Streaming Platform</p>
+              <h3 class="project-title">PlayVibe</h3>
+              <p class="project-desc">
+                A cinematic streaming platform built with Next.js, dynamic
+                browsing, search, subscription plans, and smooth animations.
+              </p>
+
+              <div class="project-actions">
+                <a
+                  class="project-link"
+                  href="https://playvibe-livid.vercel.app/"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <i data-lucide="external-link"></i>
+                  Live Demo
+                </a>
+
+                <a
+                  class="project-link"
+                  href="https://www.linkedin.com/feed/update/urn:li:activity:7440192192054345730/"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <i data-lucide="linkedin"></i>
+                  LinkedIn
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article
+            class="project-card reveal-card"
+            data-category="web"
+            data-level="advanced"
+            data-title="E-Book"
+            data-video="assets/videos/E-Book.mov"
+            data-modal-title="E-Book Web Application"
+          >
+            <div class="project-image">
+              <img
+                src="assets/images/E-Book.png"
+                alt="E-Book project"
+                class="project-img"
+                loading="lazy"
+              />
+              <span class="project-play"><i data-lucide="play"></i></span>
+            </div>
+            <div class="project-body">
+              <p class="project-tag">Web App</p>
+              <h3 class="project-title">E-Book</h3>
+              <p class="project-desc">
+                A clean digital reading and book presentation interface focused
+                on structure, usability, and visual clarity.
+              </p>
+              <div class="project-actions">
+                <a
+                  class="project-link"
+                  href="https://www.linkedin.com/feed/update/urn:li:activity:7440507226156597248/"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <i data-lucide="linkedin"></i>
+                  LinkedIn
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article
+            class="project-card reveal-card"
+            data-category="web"
+            data-level="beginner"
+            data-title="Bakery"
+            data-video="assets/videos/Bakery.mov"
+            data-modal-title="Bakery Website"
+          >
+            <div class="project-image">
+              <img
+                src="assets/images/Bakery.png"
+                alt="Bakery project"
+                class="project-img"
+                loading="lazy"
+              />
+              <span class="project-play"><i data-lucide="play"></i></span>
+            </div>
+            <div class="project-body">
+              <p class="project-tag">Landing Page</p>
+              <h3 class="project-title">Bakery</h3>
+              <p class="project-desc">
+                A warm bakery landing page with product sections, visual
+                hierarchy, and responsive layout.
+              </p>
+              <div class="project-actions">
+                <a
+                  class="project-link"
+                  href="https://www.linkedin.com/feed/update/urn:li:activity:7440505521549336576/"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <i data-lucide="linkedin"></i>
+                  LinkedIn
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article
+            class="project-card reveal-card"
+            data-category="web"
+            data-level="advanced"
+            data-title="CHIPS"
+            data-video="assets/videos/CHIPS.mov"
+            data-modal-title="CHIPS Web Project"
+          >
+            <div class="project-image">
+              <img
+                src="assets/images/CHIPS.png"
+                alt="CHIPS project"
+                class="project-img"
+                loading="lazy"
+              />
+              <span class="project-play"><i data-lucide="play"></i></span>
+            </div>
+            <div class="project-body">
+              <p class="project-tag">Web App</p>
+              <h3 class="project-title">CHIPS</h3>
+              <p class="project-desc">
+                A colorful web project with a clear layout, interactive
+                sections, and polished visual presentation.
+              </p>
+              <div class="project-actions">
+                <a
+                  class="project-link"
+                  href="https://www.linkedin.com/feed/update/urn:li:activity:7440503494471716865/"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <i data-lucide="linkedin"></i>
+                  LinkedIn
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article
+            class="project-card reveal-card"
+            data-category="web"
+            data-level="advanced"
+            data-title="Horse Racing"
+            data-video="assets/videos/Horse-Racing.mov"
+            data-modal-title="Horse Racing Portal"
+          >
+            <div class="project-image">
+              <img
+                src="assets/images/Horse-Racing.jpg"
+                alt="Horse Racing project"
+                class="project-img"
+                loading="lazy"
+              />
+              <span class="project-play"><i data-lucide="play"></i></span>
+            </div>
+            <div class="project-body">
+              <p class="project-tag">Web Portal</p>
+              <h3 class="project-title">Horse Racing</h3>
+              <p class="project-desc">
+                A structured horse racing portal with modern UI, strong visuals,
+                and clear navigation.
+              </p>
+              <div class="project-actions">
+                <a
+                  class="project-link"
+                  href="https://www.linkedin.com/feed/update/urn:li:activity:7428111087943782400/"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <i data-lucide="linkedin"></i>
+                  LinkedIn
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article
+            class="project-card reveal-card"
+            data-category="web"
+            data-level="advanced"
+            data-title="MaredCars"
+            data-video="assets/videos/MaredCars.mov"
+            data-modal-title="MaredCars Platform"
+          >
+            <div class="project-image">
+              <img
+                src="assets/images/MaredCars.jpg"
+                alt="MaredCars project"
+                class="project-img"
+                loading="lazy"
+              />
+              <span class="project-play"><i data-lucide="play"></i></span>
+            </div>
+            <div class="project-body">
+              <p class="project-tag">Web Platform</p>
+              <h3 class="project-title">MaredCars</h3>
+              <p class="project-desc">
+                A car-focused platform concept with clean cards, vehicle
+                presentation, and professional user flow.
+              </p>
+              <div class="project-actions">
+                <a
+                  class="project-link"
+                  href="https://www.linkedin.com/feed/update/urn:li:activity:7440509570537480193/"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <i data-lucide="linkedin"></i>
+                  LinkedIn
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article
+            class="project-card reveal-card"
+            data-category="web"
+            data-level="advanced"
+            data-title="Omnifood"
+            data-video="assets/videos/Omnifood.mov"
+            data-modal-title="Omnifood Website"
+          >
+            <div class="project-image">
+              <img
+                src="assets/images/Omnifood.png"
+                alt="Omnifood project"
+                class="project-img"
+                loading="lazy"
+              />
+              <span class="project-play"><i data-lucide="play"></i></span>
+            </div>
+            <div class="project-body">
+              <p class="project-tag">Responsive Website</p>
+              <h3 class="project-title">Omnifood</h3>
+              <p class="project-desc">
+                A responsive food website focused on sections, spacing,
+                typography, and conversion-oriented design.
+              </p>
+              <div class="project-actions">
+                <a
+                  class="project-link"
+                  href="https://www.linkedin.com/feed/update/urn:li:activity:7440501519185256448/"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <i data-lucide="linkedin"></i>
+                  LinkedIn
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article
+            class="project-card reveal-card"
+            data-category="ui"
+            data-level="advanced"
+            data-title="Portfolio"
+            data-video="assets/videos/Portfolio.mov"
+            data-modal-title="Portfolio Design"
+          >
+            <div class="project-image">
+              <img
+                src="assets/images/Portfolio.jpg"
+                alt="Portfolio project"
+                class="project-img"
+                loading="lazy"
+              />
+              <span class="project-play"><i data-lucide="play"></i></span>
+            </div>
+            <div class="project-body">
+              <p class="project-tag">Portfolio / UI</p>
+              <h3 class="project-title">Portfolio</h3>
+              <p class="project-desc">
+                A personal portfolio concept focused on professional layout,
+                strong first impression, and smooth presentation.
+              </p>
+              <div class="project-actions">
+                <a
+                  class="project-link"
+                  href="https://www.linkedin.com/feed/update/urn:li:activity:7440486077494247424/"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <i data-lucide="linkedin"></i>
+                  LinkedIn
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article
+            class="project-card reveal-card"
+            data-category="ui"
+            data-level="beginner"
+            data-title="Responsive Lamp"
+            data-video="assets/videos/responsive_lamp.mov"
+            data-modal-title="Responsive Lamp UI"
+          >
+            <div class="project-image">
+              <img
+                src="assets/images/responsive_lamp.png"
+                alt="Responsive Lamp project"
+                class="project-img"
+                loading="lazy"
+              />
+              <span class="project-play"><i data-lucide="play"></i></span>
+            </div>
+            <div class="project-body">
+              <p class="project-tag">UI Experiment</p>
+              <h3 class="project-title">Responsive Lamp</h3>
+              <p class="project-desc">
+                A responsive creative UI experiment focused on layout behavior
+                and visual presentation.
+              </p>
+              <div class="project-actions">
+                <a
+                  class="project-link"
+                  href="https://www.linkedin.com/feed/update/urn:li:activity:7428141993152663552/"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <i data-lucide="linkedin"></i>
+                  LinkedIn
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article
+            class="project-card reveal-card"
+            data-category="mobile"
+            data-level="beginner"
+            data-title="Responsive Portfolio Website"
+            data-video="assets/videos/Responsive-Portfolio-Website.mov"
+            data-modal-title="Responsive Portfolio Website"
+          >
+            <div class="project-image">
+              <img
+                src="assets/images/Responsive-Portfolio-Website.png"
+                alt="Responsive Portfolio Website project"
+                class="project-img"
+                loading="lazy"
+              />
+              <span class="project-play"><i data-lucide="play"></i></span>
+            </div>
+            <div class="project-body">
+              <p class="project-tag">Responsive Website</p>
+              <h3 class="project-title">Responsive Portfolio Website</h3>
+              <p class="project-desc">
+                A responsive portfolio website built to practice layout,
+                navigation, and mobile-friendly design.
+              </p>
+              <div class="project-actions">
+                <a
+                  class="project-link"
+                  href="https://www.linkedin.com/feed/update/urn:li:activity:7428121851375218688/"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <i data-lucide="linkedin"></i>
+                  LinkedIn
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <p id="emptyState" class="empty-state hidden" aria-live="polite">
+          No projects found for the selected options.
+        </p>
+      </div>
+    </section>
+
+    <!-- ===== GitHub API Section ===== -->
+    <section id="github" class="section reveal">
+      <div class="container">
+        <h2 class="section-title">GitHub Repositories</h2>
+        <p class="section-subtitle">
+          This section fetches live repository data using the GitHub API to make
+          the portfolio dynamic and up to date.
+        </p>
+
+        <div class="github-header">
+          <div class="github-profile">
+            <i data-lucide="github"></i>
+            <div>
+              <p class="github-label">GitHub Username</p>
+              <h3 class="github-name">mohammedDev11</h3>
+            </div>
+          </div>
+
+          <button id="reloadReposBtn" class="btn btn-outline" type="button">
+            <i data-lucide="refresh-cw"></i>
+            Reload Repositories
+          </button>
+        </div>
+
+        <p id="repoStatus" class="repo-status" aria-live="polite">
+          Loading repositories...
+        </p>
+
+        <div id="repoList" class="repo-grid"></div>
+      </div>
+    </section>
+
+    <!-- ===== Contact ===== -->
+    <section id="contact" class="section reveal">
+      <div class="container">
+        <h2 class="section-title">Contact</h2>
+        <p class="section-subtitle">Send a message using this demo form.</p>
+
+        <form class="contact-form" id="contactForm" novalidate>
+          <div class="form-row">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" placeholder="Your name" />
+            <small class="field-error" id="nameError"></small>
+          </div>
+
+          <div class="form-row">
+            <label for="email">Email</label>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              placeholder="your@email.com"
+            />
+            <small class="field-error" id="emailError"></small>
+          </div>
+
+          <div class="form-row">
+            <label for="message">Message</label>
+            <textarea
+              id="message"
+              name="message"
+              rows="5"
+              placeholder="Write your message..."
+            ></textarea>
+            <small class="field-error" id="messageError"></small>
+          </div>
+
+          <div class="form-check">
+            <input id="agreeTerms" name="agreeTerms" type="checkbox" />
+            <label for="agreeTerms" class="checkbox-label">
+              I confirm that the information entered is valid.
+            </label>
+          </div>
+          <small class="field-error" id="agreeTermsError"></small>
+
+          <button class="btn" type="submit" id="submitBtn">
+            <i data-lucide="send"></i>
+            Send Message
+          </button>
+
+          <p id="formStatus" class="form-status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
+    <!-- ===== Project Video Modal ===== -->
+    <div
+      class="video-modal"
+      id="projectVideoModal"
+      aria-hidden="true"
+      role="dialog"
+      aria-labelledby="modalTitle"
+    >
+      <div class="video-modal-overlay" data-close-modal></div>
+
+      <div class="video-modal-content">
+        <div class="video-modal-header">
+          <h3 id="modalTitle">Project Demo</h3>
+          <button
+            class="video-modal-close"
+            id="closeVideoModal"
+            type="button"
+            aria-label="Close video modal"
+          >
+            <i data-lucide="x"></i>
+          </button>
+        </div>
+
+        <video id="projectVideo" class="project-video" controls playsinline>
+          <source src="" type="video/quicktime" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="container">
+        <p>© 2026 Mohammed Alshammasi — Assignment 4</p>
+      </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script>
+      lucide.createIcons();
+    </script>
+  </body>
 </html>
