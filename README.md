@@ -41,7 +41,7 @@ git clone https://github.com/mohammedDev11/202279720-mohammedalshammasi-assignme
 
 ## ▶️ How to Run live
 
-1. Click
+1. Copy The URL
 
 ```bash
 https://mohammeddev11.github.io/202279720-mohammedalshammasi-assignment4/
