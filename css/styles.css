@@ -329,15 +329,27 @@ img {
 .hero-image {
   display: flex;
   justify-content: center;
+  padding: 20px;
+  border-radius: var(--radius-lg);
+
+  /* Darker, richer blue */
+  background: linear-gradient(135deg, #0b1b31 0%, #10243d 40%, #1e3a8a 100%);
+
+  box-shadow: var(--shadow);
 }
 
-.profile-img {
-  width: 100%;
-  max-width: 420px;
-  border-radius: 28px;
-  object-fit: cover;
-  box-shadow: var(--shadow);
+.hero-image {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  border-radius: var(--radius-lg);
+
+  background: linear-gradient(145deg, #07111f, #0b1b31);
+
   border: 1px solid var(--border);
+  box-shadow:
+    inset 0 0 40px rgba(37, 99, 235, 0.15),
+    var(--shadow);
 }
 
 /* =========================
