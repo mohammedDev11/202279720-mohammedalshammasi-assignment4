@@ -38,3 +38,11 @@ The website showcases my projects, integrates live GitHub data, and includes int
 ```bash
 git clone https://github.com/mohammedDev11/202279720-mohammedalshammasi-assignment4.git
 ```
+
+## ▶️ How to Run live
+
+1. Click
+
+```bash
+https://mohammeddev11.github.io/202279720-mohammedalshammasi-assignment4/
+```
