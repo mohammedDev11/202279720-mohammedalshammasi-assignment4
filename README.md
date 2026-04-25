@@ -36,7 +36,7 @@ The website showcases my projects, integrates live GitHub data, and includes int
 1. Download or clone the repository:
 
 ```bash
-git clone https://github.com/mohammedDev11/202279720-mohammedalshammasi-assignment4.git
+git clone https://github.com/mohammedDev11/mohammed-alshammasi-portfolio.git
 ```
 
 ## ▶️ How to Run live
