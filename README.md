@@ -44,5 +44,5 @@ git clone https://github.com/mohammedDev11/mohammed-alshammasi-portfolio.git
 1. Copy The URL
 
 ```bash
-https://mohammeddev11.github.io/202279720-mohammedalshammasi-assignment4/
+https://mohammeddev11.github.io/mohammed-alshammasi-portfolio/
 ```
