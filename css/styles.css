@@ -309,6 +309,17 @@ img {
   font-size: 0.95rem;
 }
 
+.btn-cv {
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  color: #fff;
+  border: none;
+}
+
+.btn-cv:hover {
+  background: linear-gradient(135deg, #1d4ed8, #1e40af);
+  transform: translateY(-2px);
+}
+
 .greeting {
   margin: 10px 0 16px;
   color: var(--muted);
@@ -593,7 +604,7 @@ body.light-theme #contact {
 }
 
 /* =========================
-   Projects - Fixed Card Height
+   Projects
    ========================= */
 
 .projects-grid {
@@ -1054,9 +1065,95 @@ textarea:focus {
    ========================= */
 
 .footer {
-  padding: 26px 0;
+  padding: 60px 0;
   color: var(--muted);
   border-top: 1px solid var(--border);
+  margin-top: 80px;
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.footer-name {
+  font-size: 20px;
+  margin: 0 0 8px;
+  color: var(--text);
+}
+
+.footer-text {
+  color: var(--muted);
+  max-width: 420px;
+  font-size: 14px;
+  margin: 0;
+}
+
+.footer-copy {
+  margin: 10px 0 0;
+  font-size: 13px;
+  color: var(--muted);
+  opacity: 0.8;
+}
+
+.footer-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.footer-social {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 11px 17px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 900;
+  transition:
+    transform 0.22s ease,
+    background 0.22s ease,
+    color 0.22s ease,
+    border-color 0.22s ease;
+  background: rgba(37, 99, 235, 0.1);
+  color: var(--text);
+  border: 1px solid rgba(37, 99, 235, 0.18);
+}
+
+.footer-social:hover {
+  transform: translateY(-2px);
+}
+
+.footer-social svg,
+.footer-social i {
+  width: 18px;
+  height: 18px;
+  color: currentColor;
+  stroke: currentColor;
+  flex-shrink: 0;
+}
+
+body:not(.light-theme) .footer-social {
+  background: rgba(255, 255, 255, 0.06);
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
+.linkedin-btn:hover {
+  background: #0077b5;
+  color: #ffffff;
+  border-color: #0077b5;
+}
+
+.cv-btn:hover {
+  background: #2563eb;
+  color: #ffffff;
+  border-color: #2563eb;
 }
 
 /* =========================
@@ -1102,6 +1199,18 @@ textarea:focus {
 
   .project-controls {
     align-items: stretch;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer-actions {
+    width: 100%;
+    justify-content: flex-start;
   }
 }
 
